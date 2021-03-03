@@ -19,14 +19,8 @@
 
 
 
-@if (App::getLocale() == 'en')
-<!-- Sidemenu css -->
-<link rel="stylesheet" href="{{URL::asset('Admin/css/sidemenu.css')}}">
-<!--- Style css -->
-<link href="{{URL::asset('Admin/css/style.css')}}" rel="stylesheet">
-@else
+
 <!-- Sidemenu css -->
 <link rel="stylesheet" href="{{URL::asset('Admin/css-rtl/sidemenu.css')}}">
 <!--- Style css -->
 <link href="{{URL::asset('Admin/css-rtl/style.css')}}" rel="stylesheet">
-@endif

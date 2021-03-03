@@ -15,25 +15,22 @@ class LiveSearchController extends Controller
     public function action(Request $request)
     {
         // return $request;
-        if ($request->ajax())
-        {
+        if ($request->ajax()) {
             $output = '';
             $query = $request->get('query');
 
-            if ($query != '')
-            {
-            $data = DB::table('csv_customers')
-                ->where('social_number', $query)
+            if ($query != '') {
+                $data = DB::table('csv_customers')
+                    ->where('social_number', $query)
+                    ->orwhere('phone', $query)
 
-                ->orderBy('id', 'desc')
-                ->get();
+                    ->orderBy('id', 'desc')
+                    ->get();
 
                 $total_row = $data->count();
 
-                if ($total_row > 0)
-                {
-                    foreach ($data as $row)
-                    {
+                if ($total_row > 0) {
+                    foreach ($data as $row) {
                         $output .= '
                         <tr>
                         <td>' . $row->name . '</td>
@@ -51,18 +48,13 @@ class LiveSearchController extends Controller
                     }
                 }
 
-            }else
-            {
+            } else {
                 $output = '
                     <tr>
                         <td align="center" colspan="9">لا يوجد تصاريح</td>
                     </tr>
                     ';
             }
-
-
-
-
 
             $data = array(
                 'table_data' => $output,

@@ -1,7 +1,7 @@
 <!-- Deleted Sections -->
 <!-- Modal -->
-<div class="modal fade" id="delete_section{{ $row->id }}" tabindex="-1" role="dialog"
-    aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+<div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -11,12 +11,12 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="{{ route('data_delete','test') }}" method="post">
+                <form action="{{ route('alldelete') }}" method="post">
                     @method('DELETE')
                     @csrf
 
-                    <p class="h4 text-danger">هل انت متاكد من حذف الملف</p>
-                    <input type="hidden" name="id" value="{{$row->id}}">
+                    <p class="h4 text-danger">هل انت متاكد من حذف كل الملف</p>
+
 
             </div>
             <div class="modal-footer">

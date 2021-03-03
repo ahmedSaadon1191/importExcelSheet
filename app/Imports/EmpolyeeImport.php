@@ -8,11 +8,8 @@ use Maatwebsite\Excel\Concerns\ToModel;
 class EmpolyeeImport implements ToModel
 {
 
-
     public function model(array $row)
     {
-        // dd($row);
-
         return new Customer([
 
             'name' => $row['1'],

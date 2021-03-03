@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 @section('title')
-{{ trans('admin/cvs.cvs') }}
+رفع ملف
 @endsection
 @section('css')
 <!-- Internal Data table css -->
@@ -18,8 +18,7 @@
 <div class="breadcrumb-header justify-content-between">
     <div class="my-auto">
         <div class="d-flex">
-            <h4 class="content-title mb-0 my-auto">{{ trans('admin/cvs.home') }}</h4><span
-                class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ trans('admin/cvs.cvs') }}</span>
+            <h4 class="content-title mb-0 my-auto">رفع ملف اكسل </h4>
         </div>
     </div>
 
@@ -32,28 +31,18 @@
 <script>
     window.onload = function() {
         notif({
-            msg: "{{ trans('admin/cvs.Added_Succesfully') }}"
+            msg: "تم الحفظ بنجاح"
             , type: "success"
         });
     }
 </script>
 @endif
 
-@if (session()->has('Edit_Succesfully'))
-<script>
-    window.onload = function() {
-        notif({
-            msg: "{{ trans('admin/cvs.Edit_Succesfully') }}"
-            , type: "success"
-        });
-    }
-</script>
-@endif
 @if (session()->has('Delete_Succesfully'))
 <script>
     window.onload = function() {
         notif({
-            msg: "{{ trans('admin/cvs.Delete_Succesfully') }}"
+            msg: "تم الحذف بنجاح"
             , type: "success"
         });
     }
@@ -70,6 +59,21 @@
 </div>
 @endif
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- row -->
 <div class="row">
     <div class="col-xl-12">
@@ -79,13 +83,18 @@
                 <div class="row">
                     {{-- strat Button Create --}}
                     <div class="col-4">
-                        <a class="modal-effect btn btn-outline-primary" data-effect="effect-scale" data-toggle="modal"
-                            href="#add_section">add</a>
+                        <a class="modal-effect btn btn-outline-primary mr-1 mb-1" data-effect="effect-scale"
+                            data-toggle="modal" href="#add_section">اضافه</a>
 
                         @include('admin.cvs.create')
                     </div>
                     {{-- End Button Create --}}
 
+
+
+                    <a class="modal-effect btn btn-warning mr-1 mb-1" href='#delete' data-toggle="modal"
+                        data-effect="effect-scale" href="{{ route('alldelete') }}">حذف </a>
+                    @include('admin.cvs.delete_all')
                 </div>
             </div>
             <div class="card-body">
@@ -103,7 +112,7 @@
                                 <th>بدايه التصريح</th>
                                 <th>نهايه التصريح</th>
                                 <th>الملاحظات </th>
-                                {{-- <th> الاجرائات</th> --}}
+                                <th> الاجرائات</th>
 
                             </tr>
                         </thead>
@@ -127,12 +136,13 @@
                                 <td>{{ $row->start_permit}}</td>
                                 <td>{{ $row->end_permit}}</td>
                                 <td>{{ $row->notes}}</td>
+                                <td>الاجرائات</td>
 
 
 
 
 
-                                {{-- <td>
+                                <td>
                                     <div class="dropdown">
                                         <button aria-expanded="false" aria-haspopup="true"
                                             class="btn ripple btn-primary btn-sm" data-toggle="dropdown"
@@ -145,14 +155,14 @@
                                                 &nbsp;&nbsp;edit</a>
 
                                             <a class="dropdown-item" data-toggle="modal"
-                                                data-target="#delete_section}"><i
+                                                data-target="#delete_section{{ $row->id }}"><i
                                                     class="text-danger fas fa-trash-alt"></i>
                                                 &nbsp;&nbsp;delete</a>
                                         </div>
                                     </div>
-                                </td> --}}
-                                {{-- @include('admin.cvs.edit')
-                                @include('admin.cvs.delete') --}}
+                                </td>
+
+                                @include('admin.cvs.delete')
                             </tr>
                             @endforeach
                         </tbody>
