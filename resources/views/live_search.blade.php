@@ -25,29 +25,28 @@
             </div>
             <div id="navbar-collapse" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a class="" href="#" data-scroll="Home">Home</a></li>
-                    <li><a href="#" data-scroll="About" class="">About</a></li>
-                    <li><a href="#" data-scroll="Our-Work" class="">Our work</a></li>
-                    <li><a href="#" data-scroll="Team" class="active">Team</a></li>
-                    <li><a href="#" data-scroll="Pricing">Pricing</a></li>
-                    <li><a href="#" data-scroll="Blog">Blog</a></li>
-                    <li><a href="#" data-scroll="Contact-Us">Contact Us</a></li>
+                    <li><a class="https://tulkarmccia.org/" href="https://tulkarmccia.org/"
+                            data-scroll="Home">الرئيسيه</a></li>
+                    <li><a href="https://tulkarmccia.org/contact/" data-scroll="About" class="">إتصل بنا</a></li>
+                    <li><a href="https://tulkarmccia.org/%d8%a7%d9%84%d8%aa%d8%b3%d8%ac%d9%8a%d9%84-%d9%88%d8%a7%d9%84%d8%a5%d8%b4%d8%aa%d8%b1%d8%a7%d9%83/"
+                            data-scroll="Our-Work" class="">التسجيل والإشتراك</a></li>
+
                 </ul>
             </div>
         </div>
     </nav> <br> <br><br><br>
-    {{-- <br />
-    <br /> --}}
+
     <div class="container box">
         <div class="panel panel-default">
             <div class="panel-heading">الاستعلام عن التصاريح</div>
             <div class="panel-body">
                 <div class="form-group">
-                    <input type="text" name="search" id="search" class="form-control" placeholder="ادخل رقم الهوية" />
+                    <input type="text" name="search" id="search" class="form-control"
+                        placeholder=" ادخل رقم الهوية او رقم الجوال" />
                 </div>
                 <div class="table-responsive">
                     <h3 align="center">النتائج <span id="total_records"></span></h3>
-                    <table class="table table-striped table-bordered">
+                    <table class="table table-striped table-bordered ">
                         <thead>
                             <tr>
                                 <th>الاسم</th>
@@ -154,22 +153,30 @@
 
         </div>
         <p style="color: #fff;
-     text-align:center;background:#000000;position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;" class="footer_p">&amp; جميع الحقوق محفوظة لـ غرفة طولكرم ©
+         text-align:center;background:#000000;" class="footer_p">&amp; جميع الحقوق محفوظة لـ غرفة طولكرم ©
         </p>
 
     </div>
+
     <style>
         /*==========start section Header ==========*/
         .navbar-default {
-            background-color: #a92f2f;
-            border-color: #fff;
+            background-color: #ffffff;
+            border-color: #000;
             direction: rtl;
+            color: #000;
         }
 
+        .navbar-default .navbar-nav>li>a {
+            color: #000;
+            font-weight: 700;
+            font-size: 14px;
+        }
 
+        .navbar-default .navbar-brand {
+            color: #000;
+            font-weight: 900;
+        }
 
         /*==========ُُEnd section Header ==========*/
 
@@ -179,7 +186,7 @@
             padding-bottom: 0;
             background: #151E2A;
             color: #fff;
-            position: fixed;
+
             bottom: 0;
             left: 0;
             right: 0;
@@ -367,6 +374,17 @@
             transform: scale(1.05);
 
 
+        }
+
+        .panel-default {
+            margin: 60px 0;
+            background-color: #1db24c;
+        }
+
+        .panel-heading {
+            text-align: center;
+            font-size: 23px;
+            font-weight: 900;
         }
 
         /*================= start navbar =====================*/

@@ -26,6 +26,7 @@ Route::prefix('admin')->namespace('Admin')->group(function () {
     ############  start Route ExcelController ############
     Route::get('uploaded_data', 'ExcelController@index')->name('upload_form');
     Route::any('delete/data/{test}', 'ExcelController@delete')->name('data_delete');
+    Route::any('update/data/{test}', 'ExcelController@update')->name('data_update');
 
     Route::post('upload_data', 'ExcelController@importFile')->name('uploading_form');
 

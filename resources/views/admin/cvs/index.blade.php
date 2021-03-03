@@ -143,26 +143,15 @@
 
 
                                 <td>
-                                    <div class="dropdown">
-                                        <button aria-expanded="false" aria-haspopup="true"
-                                            class="btn ripple btn-primary btn-sm" data-toggle="dropdown"
-                                            id="dropdownMenuButton" type="button">Actions<i
-                                                class="fas fa-caret-down ml-1"></i></button>
+                                    <button class="dropdown-item " data-toggle="modal"
+                                        data-target="#delete_section{{ $row->id }}"><i
+                                            class="text-danger fas fa-trash-alt"></i>
+                                        &nbsp;&nbsp;حذف</button>
 
-                                        <div class="dropdown-menu tx-13">
-                                            <a class="dropdown-item" data-toggle="modal" data-target="#edit_section"><i
-                                                    class="text-success fas fa-edit"></i>
-                                                &nbsp;&nbsp;edit</a>
-
-                                            <a class="dropdown-item" data-toggle="modal"
-                                                data-target="#delete_section{{ $row->id }}"><i
-                                                    class="text-danger fas fa-trash-alt"></i>
-                                                &nbsp;&nbsp;delete</a>
-                                        </div>
-                                    </div>
                                 </td>
 
                                 @include('admin.cvs.delete')
+                                @include('admin.cvs.edit')
                             </tr>
                             @endforeach
                         </tbody>

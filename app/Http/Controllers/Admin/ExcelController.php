@@ -60,5 +60,8 @@ class ExcelController extends Controller
         return back();
 
     }
-
+    // public function update(Request $request, $id)
+    // {
+    //     return $request;
+    // }
 }

@@ -18,15 +18,15 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="form-group">
-                                <label for="">upload cvs :</label>
+                                <label for="">رفع ملف العملاء للموقع</label>
                                 <input class="form-control" type="file" name="excelfile">
                             </div>
                         </div>
 
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
-                        <button type="submit" class="btn btn-primary">save</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">غلق</button>
+                        <button type="submit" class="btn btn-primary">حفظ بيانات</button>
                     </div>
                 </form>
             </div>

@@ -5,7 +5,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">delete</h5>
+                <h5 class="modal-title" id="exampleModalLongTitle">حذف</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -15,8 +15,7 @@
                     @method('DELETE')
                     @csrf
 
-                    <p class="h4 text-danger">هل انت متاكد من حذف كل الملف</p>
-
+                    <p class="h4  badge-danger p-3 ">هل انت متاكد من حذف كل بيانات العملاء من الموقع </p>
 
             </div>
             <div class="modal-footer">
